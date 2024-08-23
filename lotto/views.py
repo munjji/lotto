@@ -3,6 +3,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
+    return render(request, 'lotto/default.html', {})
+
+def hello (request):
+    return HttpResponse("<h1 style='color:blue;'>Hello!</h1>")
+
 
     # user_input_name = request.POST['name']
     # user_input_text = request.POST['text']
@@ -16,9 +21,3 @@ def index(request):
     # new_row.lottos = [np.randint(1, 50) for i in range(6)]
 
     # new_row.save()
-    
-    return HttpResponse('<h1>hi im jihee</h1>')
-
-
-def hello (request):
-    return HttpResponse("<h1 style='color:blue;'>Hello!</h1>")
